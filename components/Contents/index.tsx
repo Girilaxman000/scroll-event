@@ -3,23 +3,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/Home.module.css";
 
 const Contents = () => {
-  const [changeBackground, setChangeBackground] = useState(false);
-
-  useEffect(() => {
-    const Background = () => {
-      console.log(window.scrollY, "contents");
-      // if (window.scrollY >= 60) {
-      //   setChangeBackground(true);
-      // } else {
-      //   setChangeBackground(false);
-      // }
-    };
-
-    window.addEventListener("scroll", Background);
-    Background();
-
-    return () => window.removeEventListener("scroll", Background);
-  }, []);
   return (
     <div style={{ background: "bisque", padding: "4px" }}>
       <div className={styles.contents_element}>

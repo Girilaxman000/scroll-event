@@ -1,11 +1,17 @@
 import React from "react";
-
+import { useScrollHook } from "../../hooks/useScrollHook";
 import styles from "../../styles/Home.module.css";
 
 const FixContent = () => {
+  const position = useScrollHook();
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ background: "aliceblue", padding: "5px" }}>
+      <div
+        style={{
+          background: position > 200 ? "red" : "aliceblue",
+          padding: "5px",
+        }}
+      >
         <div className={styles.contents_element}>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
