@@ -3,12 +3,14 @@ import { useScrollHook } from "../../hooks/useScrollHook";
 import styles from "../../styles/Home.module.css";
 
 const FixContent = () => {
-  const position = useScrollHook();
+  const result = useScrollHook();
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      className={result > 520 ? styles.fix_content_scroll : styles.fix_content}
+    >
       <div
         style={{
-          background: position > 200 ? "red" : "aliceblue",
+          background: "aliceblue",
           padding: "5px",
         }}
       >

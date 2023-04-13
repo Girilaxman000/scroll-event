@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "../../styles/Home.module.css";
+import { useScrollHook } from "../../hooks/useScrollHook";
 
 const Contents = () => {
+  const result = useScrollHook();
   return (
-    <div style={{ background: "bisque", padding: "4px" }}>
+    <div
+      style={{
+        background: "bisque",
+        padding: "4px",
+        marginTop: result > 57 ? "4.5rem" : 0,
+      }}
+    >
       <div className={styles.contents_element}>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting

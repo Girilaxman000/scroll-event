@@ -5,13 +5,15 @@ import { useScrollHook } from "../../hooks/useScrollHook";
 const Navbar = () => {
   const result = useScrollHook();
   return (
-    <div
-      className={
-        result > 57 ? styles.scroll_navbar_element : styles.navbar_element
-      }
-    >
-      <p>My Website</p>
-      <button>Click me</button>
+    <div>
+      <div
+        className={
+          result > 57 ? styles.scroll_navbar_element : styles.navbar_element
+        }
+      >
+        <p>My Website</p>
+        <button>Click me</button>
+      </div>
     </div>
   );
 };
