@@ -5,14 +5,13 @@ import styles from "../../styles/Home.module.css";
 const FixContent = () => {
   const result = useScrollHook();
   return (
-    <div
-      className={result > 520 ? styles.fix_content_scroll : styles.fix_content}
-    >
+    <div style={{ display: "flex" }}>
       <div
         style={{
           background: "aliceblue",
           padding: "5px",
         }}
+        className="scrollbar-hidden"
       >
         <div className={styles.contents_element}>
           <p>
@@ -236,6 +235,9 @@ const FixContent = () => {
         </div>
       </div>
       <div
+        className={
+          result > 520 ? styles.fix_content_scroll : styles.fix_content
+        }
         style={{
           background: "aquamarine",
           padding: "5px",

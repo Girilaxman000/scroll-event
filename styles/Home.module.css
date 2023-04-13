@@ -14,21 +14,30 @@
 
 .content_container {
   scroll-margin-top: 10px;
+  transition: 0.3s ease-in-out;
 }
 
 .fix_content {
-  display: flex;
 }
 .fix_content_scroll {
-  display: flex;
-  top: 0;
+  top: 70px;
   background: red;
   position: sticky;
   right: 0;
   left: 0;
   margin: 0;
   transition: 0.3s ease-in-out;
-  display: flex;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.footer_element {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 6px;
 }
 
 .navbar_element {
@@ -36,7 +45,9 @@
   justify-content: space-between;
   padding: 10px;
   background: mediumvioletred;
+  transition: 0.3s ease-in-out;
 }
 .header_element {
   display: flex;
+  transition: 0.3s ease-in-out;
 }
